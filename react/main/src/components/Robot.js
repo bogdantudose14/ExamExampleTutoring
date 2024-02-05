@@ -1,8 +1,8 @@
 function Robot (props) {
-  let {item} = props
   return (
     <div>
-    Hello, my name is {item.name}. I am a {item.type} and weigh {item.mass}
+      Hello, my name is {props.item.name}. I am a {props.item.type} and weigh{' '}
+      {props.item.mass}
     </div>
   )
 }

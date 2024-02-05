@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import store from "../stores/RobotStore";
-import Robot from "./Robot";
+import { useEffect, useState } from 'react'
+import store from '../stores/RobotStore'
+import Robot from './Robot'
 
-function RobotList(props) {
-  console.log(props.dataFromApp);
+function RobotList (props) {
+  // console.log(props.dataFromApp);
 
-  const [robots, setRobots] = useState([]);
+  const [robots, setRobots] = useState([])
 
   useEffect(() => {
-    setRobots(store.getRobots());
-    store.emitter.addListener("UPDATE", () => {
-      setRobots(store.getRobots());
-    });
-  }, []);
+    setRobots(store.getRobots())
+    store.emitter.addListener('UPDATE', () => {
+      setRobots(store.getRobots())
+    })
+  }, [])
 
   return (
     <div>
@@ -22,7 +22,7 @@ function RobotList(props) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default RobotList;
+export default RobotList
